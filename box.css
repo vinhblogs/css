@@ -1,0 +1,92 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+.header{
+    background: wheat;
+    text-align: center;
+    padding:20px; 
+    
+}
+.navmenu{
+    background: #333;
+    overflow: hidden;
+}
+.navmenu a{
+    display: block;
+    float: left;
+    padding:20px;
+    color: white;
+    text-decoration: none;
+}
+.navmenu a:hover{
+    background: white;
+    color: black
+}
+.content {
+    display: flex;
+    flex-direction: row;
+}
+.content .columns{
+    padding:10px;
+}
+.leftcolumns{
+    float: left;
+    width: 70%;
+}
+.rightcolumns{
+    float: left;
+    width: 30%;
+    background-color: #f1f1f1;
+   
+}
+.fakeimg{
+    background-color: #aaa;
+    width: 100%;
+    padding: 10px;
+}
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 10px;
+  }
+/* xóa dòng */
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.footer{
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    background: wheat;
+}
+/* .row .leftcolumns{
+    float: left;
+    width: 70%;
+}
+.row .rightcolumns{
+    float: left;
+    width: 30%;
+    /* padding-left: 10px; */
+    /* background-color: #f1f1f1;
+} */ 
+/* .footer{
+    
+    text-align: center;
+    padding:20px;
+} */
+@media screen and (max-width: 800px) {
+    .leftcolumns, .rightcolumns {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+@media screen and (max-width:600px) {
+    .content{
+    flex-direction: column;
+    }
+}
